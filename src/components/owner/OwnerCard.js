@@ -6,9 +6,9 @@ const OwnerCard = () => {
     <div className="card">
       <div className="card-content">
         <h3>
-          Name: <span className="card-petname">Doodles</span>
+          Name: <span className="card-ownername">Roxanne</span>
         </h3>
-        <p>Breed: Poodle</p>
+        <p>Contact Info: Roxanne@kennel.com</p>
       </div>
     </div>
   );

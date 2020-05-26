@@ -6,9 +6,9 @@ const LocationCard = () => {
     <div className="card">
       <div className="card-content">
         <h3>
-          Name: <span className="card-locationname">Doodles</span>
+          Location Name: Cat Kennel <span className="card-locationname"></span>
         </h3>
-        <p>Breed: Poodle</p>
+        <p>Address: Cat Kennel Lane </p>
       </div>
     </div>
   );

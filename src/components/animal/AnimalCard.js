@@ -11,7 +11,7 @@ const AnimalCard = () => {
         <h3>
           Name: <span className="card-petname">Doodles</span>
         </h3>
-        <p>Breed: Poodle</p>
+        <p> Breed: Poodle</p>
       </div>
     </div>
   );

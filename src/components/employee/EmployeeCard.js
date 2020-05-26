@@ -6,9 +6,9 @@ const EmployeeCard = () => {
     <div className="card">
       <div className="card-content">
         <h3>
-          Name: <span className="card-petname">Doodles</span>
+          Name: <span className="card-employeename">Zane</span>
         </h3>
-        <p>Breed: Poodle</p>
+        <p>Role: Kennel Attendent</p>
       </div>
     </div>
   );
