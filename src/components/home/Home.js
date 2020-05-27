@@ -3,9 +3,9 @@ import React from "react";
 const Home = () => {
   return (
     <address>
-      Visit Us at the Nashville North Location
+      Visit Us in Crystal Tokyo
       <br />
-      500 Puppy Way
+      in the Palace Garden
     </address>
   );
 };

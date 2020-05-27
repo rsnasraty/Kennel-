@@ -5,6 +5,9 @@ const EmployeeCard = (props) => {
   return (
     <div className="card">
       <div className="card-content">
+      <picture>
+          <img src={props.employee.images} alt="Employee"/>
+        </picture>
         <h2>
           Name: <span className="card-employeename">{props.employee.name}</span>
         </h2>
