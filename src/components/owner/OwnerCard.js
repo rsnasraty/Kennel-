@@ -1,14 +1,15 @@
 import React from "react";
 import "./OwnerCard.css";
 
-const OwnerCard = () => {
+const OwnerCard = (props) => {
   return (
     <div className="card">
       <div className="card-content">
-        <h3>
-          Name: <span className="card-ownername">Roxanne</span>
-        </h3>
-        <p>Contact Info: Roxanne@kennel.com</p>
+        <h2>
+          Name: <span className="card-ownername">{props.owner.name}</span>
+        </h2>
+        <h4>Email:{props.owner.email}</h4>
+        <h4>Phone: {props.owner.phoneNumber}</h4>
       </div>
     </div>
   );

@@ -1,0 +1,19 @@
+{
+    "animals": [
+        { "id": 1, "name": "Melly", "breed": "Ragdoll"},
+        { "id": 2, "name": "Cocoa", "breed": "Siamese" },
+        { "id": 3, "name": "Morgana", "breed": "Domestic Shorthair" }
+    ],
+    "owners": [
+        { "id": 1, "name": "Roxanne", "email": "Roxanne@kennel.com", "phoneNumber": "867-5309" },
+        { "id": 2, "name": "Sophia", "email": "Sophia@kennel.com", "phoneNumber": "123-4567" }
+    ],
+    "employees": [
+        { "id": 1, "name": "Zane", "role": "Kennel Attendent"},
+        { "id": 2, "name": "Michelle", "role": "Public Relations" }
+    ],
+    "location": [
+        { "id": 1, "name": "Cat Kennel", "address": "Cat Kennel Lane"}
+    ]
+
+}
