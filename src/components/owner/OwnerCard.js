@@ -5,6 +5,9 @@ const OwnerCard = (props) => {
   return (
     <div className="card">
       <div className="card-content">
+      <picture>
+          <img src={props.owner.images} alt="Owner"/>
+        </picture>
         <h2>
           Name: <span className="card-ownername">{props.owner.name}</span>
         </h2>
