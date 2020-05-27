@@ -6,9 +6,7 @@ const NavBar = () => {
   return (
     <header>
       <h1 className="site-title">
-        Student Kennels
-        <br />
-        <small>Loving care when you're not there.</small>
+       Crystal Tokyo Cat Sitting
       </h1>
       <nav>
         <ul className="container">
