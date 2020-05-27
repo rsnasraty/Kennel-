@@ -19,17 +19,17 @@ const NavBar = () => {
           </li>
           <li>
             <Link className="nav-link" to="/animals">
-              Animals
+            Animals
             </Link>
           </li>
-          <li><Link className="nav-link" to="/locations">
-          Locations
+          <li><Link className="nav-link" to="/location">
+          Location
             </Link></li>
           <li><Link className="nav-link" to="/employees">
           Employees
             </Link></li>
             <li><Link className="nav-link" to="/owners">
-          Owner
+          Owners
             </Link></li>
         </ul>
       </nav>

@@ -1,14 +1,14 @@
 import React from "react";
 import "./EmployeeCard.css";
 
-const EmployeeCard = () => {
+const EmployeeCard = (props) => {
   return (
     <div className="card">
       <div className="card-content">
-        <h3>
-          Name: <span className="card-employeename">Zane</span>
-        </h3>
-        <p>Role: Kennel Attendent</p>
+        <h2>
+          Name: <span className="card-employeename">{props.employee.name}</span>
+        </h2>
+        <h4>Role: {props.employee.role}</h4>
       </div>
     </div>
   );
