@@ -1,20 +1,67 @@
 {
-    "animals": [
-        { "id": 1, "name": "Luna", "color": "Dark Purple", "images": "images/Luna2.jpg"},
-        { "id": 2, "name": "Artemis", "color": "White", "images":"images/artemis2.jpg" },
-        { "id": 3, "name": "Diana", "color": "Purple", "images":"images/diana2.jpg" }
-    ],
-    "owners": [
-        { "id": 1, "name": "Usagi", "email": "usagi@rabbit.com", "phoneNumber": "123-4567", "images": "images/usagiluna.png" },
-        { "id": 1, "name": "Minako", "email": "minako@rabbit.com", "phoneNumber": "867-5309", "images":"images/minaartemis.gif" },
-        { "id": 1, "name": "Chibusa", "email": "chibiusa@rabbit.com", "phoneNumber": "987-6543", "images":"images/chibiusacats.jpg" }
-    ],
-    "employees": [
-        { "id": 1, "name": "Ami Mizuno", "role": "Cat Sitter","images":"images/amiluna.png" },
-        { "id": 2, "name": "Rei Hino", "role": "Public Relations", "images":"images/rei.jpg"  }
-    ],
-    "location": [
-        { "id": 1, "name": "Palace Garden", "address": "Crystal Tokyo Palace", "images":"images/crystaltokyo.jpg" }
-    ]
-
+  "animals": [
+    {
+      "id": 1,
+      "name": "Luna",
+      "color": "Dark Purple",
+      "images": "images/Luna2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Artemis",
+      "color": "White",
+      "images": "images/artemis2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Diana",
+      "color": "Purple",
+      "images": "images/diana2.jpg"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Usagi",
+      "email": "usagi@rabbit.com",
+      "phoneNumber": "123-4567",
+      "images": "images/usagiluna.png"
+    },
+    {
+      "id": 2,
+      "name": "Minako",
+      "email": "minako@rabbit.com",
+      "phoneNumber": "867-5309",
+      "images": "images/minaartemis.gif"
+    },
+    {
+      "id": 3,
+      "name": "Chibusa",
+      "email": "chibiusa@rabbit.com",
+      "phoneNumber": "987-6543",
+      "images": "images/chibiusacats.jpg"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Ami Mizuno",
+      "role": "Cat Sitter",
+      "images": "images/amiluna.png"
+    },
+    {
+      "id": 2,
+      "name": "Rei Hino",
+      "role": "Public Relations",
+      "images": "images/rei.jpg"
+    }
+  ],
+  "location": [
+    {
+      "id": 1,
+      "name": "Palace Garden",
+      "address": "Crystal Tokyo Palace",
+      "images": "images/crystaltokyo.jpg"
+    }
+  ]
 }

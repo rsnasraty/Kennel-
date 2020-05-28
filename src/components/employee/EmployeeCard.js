@@ -3,7 +3,7 @@ import "./EmployeeCard.css";
 
 const EmployeeCard = (props) => {
   return (
-    <div className="card">
+    <div className="Employee-card">
       <div className="card-content">
       <picture>
           <img src={props.employee.images} alt="Employee"/>
@@ -12,6 +12,7 @@ const EmployeeCard = (props) => {
           Name: <span className="card-employeename">{props.employee.name}</span>
         </h2>
         <h4>Role: {props.employee.role}</h4>
+        <button onClick={() => { props.deleteEmployee(props.employee.id) }} id="delete">Delete</button>
       </div>
     </div>
   );

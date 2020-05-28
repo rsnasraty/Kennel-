@@ -3,8 +3,8 @@ small {
   }
   
   header {
-    background-color: darkblue;
-    border: cornflowerblue solid 3px;
+    background-color: rgb(232, 214, 255);
+    border: #aa9ac4 solid 2px;
   }
   
   .site-title {
@@ -25,16 +25,16 @@ small {
     font-size: 1.5em;
     color: cornsilk;
     box-sizing: border-box;
-    background-color: cornflowerblue;
+    background-color: ##aa9ac4;
     list-style-type: none;
   }
   
   .nav-link {
-    color: cornsilk;
+    color: ghostwhite;
     text-decoration: underline;
     cursor: pointer;
   }
   
   .nav-link:hover {
-    color: maroon;
+    color: rgb(68, 9, 94);
   }
