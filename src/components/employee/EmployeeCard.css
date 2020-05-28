@@ -1,9 +1,9 @@
-.card {
+.Employee-card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
-    background: aliceblue;
+    background: rgb(246, 241, 247);
     margin-bottom: 2em;
     flex: 0 1 24%;
   }
@@ -24,12 +24,12 @@
     color: darkslategrey;
   }
   
-  .content-employeename {
+  .content-petname {
     color: darkslategrey;
   }
   
   .card button {
-    background-color: cornflowerblue;
+    background-color: rgb(215, 192, 225);
     border: none;
     color: cornsilk;
     text-align: center;
@@ -42,6 +42,10 @@
     width: 100%;
   }
   
-  .card button:hover {
-    background-color: darkblue;
+.Employee-card button:hover {
+    background-color: rgb(42, 5, 58);
+  }
+
+.Employee-card #delete {
+      background-color:rgb(232, 214, 255);
   }

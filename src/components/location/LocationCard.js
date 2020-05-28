@@ -3,7 +3,7 @@ import "./LocationCard.css";
 
 const LocationCard = (props) => {
   return (
-    <div className="card">
+    <div className="Location-card">
       <div className="card-content">
       <picture>
           <img src={props.location.images} alt="Palace Garden"/>

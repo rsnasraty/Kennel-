@@ -5,7 +5,7 @@ const Home = () => {
     <address>
       Visit Us in Crystal Tokyo
       <br />
-      in the Palace Garden
+     <em>in the Palace Garden</em>
     </address>
   );
 };

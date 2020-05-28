@@ -3,7 +3,7 @@ import "./OwnerCard.css";
 
 const OwnerCard = (props) => {
   return (
-    <div className="card">
+    <div className="Owner-card">
       <div className="card-content">
       <picture>
           <img src={props.owner.images} alt="Owner"/>

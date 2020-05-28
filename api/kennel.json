@@ -6,8 +6,8 @@
     ],
     "owners": [
         { "id": 1, "name": "Usagi", "email": "usagi@rabbit.com", "phoneNumber": "123-4567", "images": "images/usagiluna.png" },
-        { "id": 1, "name": "Minako", "email": "minako@rabbit.com", "phoneNumber": "867-5309", "images":"images/minaartemis.gif" },
-        { "id": 1, "name": "Chibusa", "email": "chibiusa@rabbit.com", "phoneNumber": "987-6543", "images":"images/chibiusacats.jpg" }
+        { "id": 2, "name": "Minako", "email": "minako@rabbit.com", "phoneNumber": "867-5309", "images":"images/minaartemis.gif" },
+        { "id": 3, "name": "Chibusa", "email": "chibiusa@rabbit.com", "phoneNumber": "987-6543", "images":"images/chibiusacats.jpg" }
     ],
     "employees": [
         { "id": 1, "name": "Ami Mizuno", "role": "Cat Sitter","images":"images/amiluna.png" },

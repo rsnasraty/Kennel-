@@ -3,7 +3,7 @@ import "./AnimalCard.css";
 
 const AnimalCard = (props) => {
   return (
-    <div className="card">
+    <div className="Animal-card">
       <div className="card-content">
         <picture>
           <img src={props.animal.images} alt="Cat" />
@@ -12,7 +12,8 @@ const AnimalCard = (props) => {
           Name: <span className="card-petname">{props.animal.name}</span>
         </h2>
         <h4> Color: {props.animal.color} </h4>
-      </div>
+        <button onClick={() => { props.deleteAnimal(props.animal.id) }} id="delete">Delete</button>
+    </div>
     </div>
   );
 };
