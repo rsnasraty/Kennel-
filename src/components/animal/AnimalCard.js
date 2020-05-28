@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import "./AnimalCard.css";
 
 const AnimalCard = (props) => {
@@ -13,6 +14,11 @@ const AnimalCard = (props) => {
         </h2>
         <h4> Color: {props.animal.color} </h4>
         <button onClick={() => { props.deleteAnimal(props.animal.id) }} id="delete">Delete</button>
+        <Link to={`/animals/${props.animal.id}`}>
+        <button>Details</button>
+        </Link>
+
+
     </div>
     </div>
   );
