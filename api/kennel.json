@@ -55,11 +55,11 @@
       "role": "Public Relations",
       "images": "images/rei.jpg"
     },
-    { "id": 3,
+    {
+      "id": 3,
       "name": "Makoto Kino",
       "role": "Nutritionist",
       "images": "images/makoto.jpg"
-
     }
   ],
   "location": [
