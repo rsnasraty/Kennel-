@@ -4,19 +4,19 @@
       "id": 1,
       "name": "Luna",
       "color": "Dark Purple",
-      "images": "images/Luna2.jpg"
+      "images": "../images/Luna2.jpg"
     },
     {
       "id": 2,
       "name": "Artemis",
       "color": "White",
-      "images": "images/artemis2.jpg"
+      "images": "../images/artemis2.jpg"
     },
     {
       "id": 3,
       "name": "Diana",
       "color": "Purple",
-      "images": "images/diana2.jpg"
+      "images": "../images/diana2.jpg"
     }
   ],
   "owners": [
@@ -25,7 +25,7 @@
       "name": "Usagi",
       "email": "usagi@rabbit.com",
       "phoneNumber": "123-4567",
-      "images": "images/usagiluna.png"
+      "images": "../images/usagiluna.png"
     },
     {
       "id": 2,
@@ -54,6 +54,12 @@
       "name": "Rei Hino",
       "role": "Public Relations",
       "images": "images/rei.jpg"
+    },
+    { "id": 3,
+      "name": "Makoto Kino",
+      "role": "Nutritionist",
+      "images": "images/makoto.jpg"
+
     }
   ],
   "location": [
