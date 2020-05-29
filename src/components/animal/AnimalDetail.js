@@ -4,6 +4,7 @@ import './AnimalDetail.css'
 
 const AnimalDetail = props => {
   const [animal, setAnimal] = useState({ name: "", color: "", images: "" });
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     //get(id) from AnimalManager and hang on to the data; put it into state
@@ -14,8 +15,17 @@ const AnimalDetail = props => {
           color: animal.color,
           images: animal.images
         });
+        setIsLoading(false);
       });
   }, [props.animalId]);
+
+  const handleDelete = () => {
+    //invoke the delete function in AnimalManger and re-direct to the animal list.
+    setIsLoading(true);
+    AnimalManager.delete(props.animalId).then(() =>
+      props.history.push("/animals")
+    );
+  };
 
   return (
     <div className="Animal-card">
@@ -25,6 +35,9 @@ const AnimalDetail = props => {
         </picture>
         <h3>Name: <span style={{ color: 'darkslategrey' }}>{animal.name}</span></h3>
         <p>Color: {animal.color}</p>
+        <button type="button" disabled={isLoading} onClick={handleDelete}>
+          Delete
+        </button>
       </div>
     </div>
   );
