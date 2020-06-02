@@ -4,19 +4,20 @@ import Home from "./home/Home";
 import AnimalList from "./animal/AnimalList";
 import LocationList from "./location/LocationList";
 import EmployeeList from "./employee/EmployeeList";
-import OwnerList from "./owner/OwnerList"; 
+import OwnerList from "./owner/OwnerList";
 import AnimalDetail from "./animal/AnimalDetail";
-import AnimalForm from './animal/AnimalForm'
-import EmployeeForm from './employee/EmployeeForm'
-import LocationForm from './location/LocationForm'
-import OwnerForm from './owner/OwnerForm'
+import AnimalForm from "./animal/AnimalForm";
+import AnimalEditForm from "./animal/AnimalEditForm";
+import EmployeeForm from "./employee/EmployeeForm";
+import LocationForm from "./location/LocationForm";
+import OwnerForm from "./owner/OwnerForm";
 import Login from "./auth/Login";
 
 const ApplicationViews = () => {
   const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
   return (
     <React.Fragment>
-    <Route path="/login" component={Login} />
+      <Route path="/login" component={Login} />
       <Route
         exact
         path="/"
@@ -24,59 +25,93 @@ const ApplicationViews = () => {
           return <Home />;
         }}
       />
-      <Route exact path="/animals" render={props => {
-  if (isAuthenticated()) {
-    return <AnimalList {...props} />
-  } else {
-    return <Redirect to="/login" />
-  }
-}} />
 
-      <Route path="/animals/:animalId(\d+)" 
-      render={(props) => {
-      return <AnimalDetail animalId={parseInt(props.match.params.animalId)}
-      {...props}
-      />
-      }}  
+      <Route
+        exact
+        path="/animals"
+        render={props => {
+          if (isAuthenticated()) {
+            return <AnimalList {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
       />
 
-    <Route path="/animals/new" 
-    render={(props) => {
-    return <AnimalForm {...props} 
-    />
-    }}  
-    />
+      <Route
+        exact
+        path="/animals/:animalId(\d+)"
+        render={props => {
+          if (isAuthenticated()) {
+            return (
+              <AnimalDetail
+                animalId={parseInt(props.match.params.animalId)}
+                {...props}
+              />
+            );
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
 
-       <Route
+      <Route
+        path="/animals/new"
+        render={props => {
+          return <AnimalForm {...props} />;
+        }}
+      />
+
+      <Route
+        path="/animals/:animalId(\d+)/edit"
+        render={props => {
+          if (isAuthenticated()) {
+            return <AnimalEditForm {...props} />;
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
+
+      <Route
         path="/employees"
         render={props => {
-          return <EmployeeList {...props}/>;
+          return <EmployeeList {...props} />;
         }}
       />
 
-<Route path="/employees/new" render={(props) => {
-  return <EmployeeForm {...props} />
-}} />
-       <Route
+      <Route
+        path="/employees/new"
+        render={props => {
+          return <EmployeeForm {...props} />;
+        }}
+      />
+      <Route
         path="/location"
         render={props => {
-          return <LocationList {...props}/>;
+          return <LocationList {...props} />;
         }}
       />
 
-<Route path="/location/new" render={(props) => {
-  return <LocationForm {...props} />
-}} />
-       <Route
+      <Route
+        path="/location/new"
+        render={props => {
+          return <LocationForm {...props} />;
+        }}
+      />
+      <Route
         path="/owners"
         render={props => {
-          return <OwnerList {...props}/>;
+          return <OwnerList {...props} />;
         }}
       />
 
-<Route path="/owners/new" render={(props) => {
-  return <OwnerForm {...props} />
-}} />
+      <Route
+        path="/owners/new"
+        render={props => {
+          return <OwnerForm {...props} />;
+        }}
+      />
     </React.Fragment>
   );
 };
