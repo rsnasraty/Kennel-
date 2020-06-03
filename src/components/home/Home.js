@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import AnimalSpotlight from "../animal/AnimalSpotlight";
+import AnimalManager from "../../modules/AnimalManager";
 
 const Home = () => {
+  const [spotlightId, setSpotlightId] = useState(0);
+
+  const refreshSpotlightAnimal = () => {
+    AnimalManager.getRandomId().then(setSpotlightId);
+  };
+
+  useEffect(() => {
+    refreshSpotlightAnimal();
+  }, []);
+
   return (
-    <address>
-      Visit Us in Crystal Tokyo
-      <br />
-     <em>in the Palace Garden</em>
-    </address>
+    <>
+      <address>
+        Visit us in the Crystal Palace
+        <br />
+       Neo Tokyo Gardens 
+      </address>
+      <h1>Animal Spotlight</h1>
+      <button onClick={refreshSpotlightAnimal}>Reload &#x27f3;</button>
+      {
+        spotlightId && <AnimalSpotlight animalId={spotlightId} />
+      }
+    </>
   );
 };
 
