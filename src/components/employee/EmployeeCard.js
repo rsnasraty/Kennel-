@@ -13,6 +13,8 @@ const EmployeeCard = (props) => {
         </h2>
         <h4>Role: {props.employee.role}</h4>
         <button onClick={() => { props.deleteEmployee(props.employee.id) }} id="delete">Delete</button>
+        <button type="button"
+        onClick={() => { props.history.push(`/employees/${props.employee.id}/details`) }}>Details</button>
       </div>
     </div>
   );

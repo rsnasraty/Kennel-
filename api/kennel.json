@@ -4,19 +4,22 @@
       "id": 1,
       "name": "Luna",
       "color": "Dark Purple",
-      "images": "../images/Luna2.jpg"
+      "images": "../images/Luna2.jpg",
+      "employeeId": 1
     },
     {
       "id": 2,
       "name": "Artemis",
       "color": "White",
-      "images": "../images/artemis2.jpg"
+      "images": "../images/artemis2.jpg",
+      "employeeId": 3
     },
     {
       "id": 3,
       "name": "Diana",
       "color": "Purple",
-      "images": "../images/diana2.jpg"
+      "images": "../images/diana2.jpg",
+      "employeeId": 2
     }
   ],
   "owners": [
