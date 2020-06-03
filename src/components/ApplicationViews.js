@@ -4,11 +4,12 @@ import Home from "./home/Home";
 import AnimalList from "./animal/AnimalList";
 import LocationList from "./location/LocationList";
 import EmployeeList from "./employee/EmployeeList";
+import EmployeeForm from "./employee/EmployeeForm";
+import EmployeeWithAnimals from "./employee/EmployeeWithAnimals.js"
 import OwnerList from "./owner/OwnerList";
 import AnimalDetail from "./animal/AnimalDetail";
 import AnimalForm from "./animal/AnimalForm";
 import AnimalEditForm from "./animal/AnimalEditForm";
-import EmployeeForm from "./employee/EmployeeForm";
 import LocationForm from "./location/LocationForm";
 import OwnerForm from "./owner/OwnerForm";
 import Login from "./auth/Login";
@@ -74,9 +75,17 @@ const ApplicationViews = () => {
       />
 
       <Route
+      exact
         path="/employees"
         render={props => {
           return <EmployeeList {...props} />;
+        }}
+      />
+
+      <Route
+        path="/employees/:employeeId(\d+)/details"
+        render={props => {
+          return <EmployeeWithAnimals {...props} />;
         }}
       />
 
