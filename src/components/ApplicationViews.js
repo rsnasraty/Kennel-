@@ -5,7 +5,7 @@ import AnimalList from "./animal/AnimalList";
 import LocationList from "./location/LocationList";
 import EmployeeList from "./employee/EmployeeList";
 import EmployeeForm from "./employee/EmployeeForm";
-import EmployeeWithAnimals from "./employee/EmployeeWithAnimals.js"
+import EmployeeWithAnimals from "./employee/EmployeeWithAnimals.js";
 import OwnerList from "./owner/OwnerList";
 import AnimalDetail from "./animal/AnimalDetail";
 import AnimalForm from "./animal/AnimalForm";
@@ -14,11 +14,12 @@ import LocationForm from "./location/LocationForm";
 import OwnerForm from "./owner/OwnerForm";
 import Login from "./auth/Login";
 
-const ApplicationViews = () => {
-  const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
+const ApplicationViews = props => {
+  const hasUser = props.hasUser;
+  const setUser = props.setUser;
+
   return (
     <React.Fragment>
-      <Route path="/login" component={Login} />
       <Route
         exact
         path="/"
@@ -28,10 +29,17 @@ const ApplicationViews = () => {
       />
 
       <Route
+        path="/login"
+        render={props => {
+          return <Login setUser={setUser} {...props} />;
+        }}
+      />
+
+      <Route
         exact
         path="/animals"
         render={props => {
-          if (isAuthenticated()) {
+          if (hasUser) {
             return <AnimalList {...props} />;
           } else {
             return <Redirect to="/login" />;
@@ -43,7 +51,7 @@ const ApplicationViews = () => {
         exact
         path="/animals/:animalId(\d+)"
         render={props => {
-          if (isAuthenticated()) {
+          if (hasUser) {
             return (
               <AnimalDetail
                 animalId={parseInt(props.match.params.animalId)}
@@ -66,7 +74,7 @@ const ApplicationViews = () => {
       <Route
         path="/animals/:animalId(\d+)/edit"
         render={props => {
-          if (isAuthenticated()) {
+          if (hasUser) {
             return <AnimalEditForm {...props} />;
           } else {
             return <Redirect to="/login" />;
@@ -75,7 +83,7 @@ const ApplicationViews = () => {
       />
 
       <Route
-      exact
+        exact
         path="/employees"
         render={props => {
           return <EmployeeList {...props} />;
