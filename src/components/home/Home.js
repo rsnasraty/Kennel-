@@ -3,7 +3,7 @@ import AnimalSpotlight from "../animal/AnimalSpotlight";
 import AnimalManager from "../../modules/AnimalManager";
 
 const Home = () => {
-  const [spotlightId, setSpotlightId] = useState(0);
+  const [spotlightId, setSpotlightId] = useState();
 
   const refreshSpotlightAnimal = () => {
     AnimalManager.getRandomId().then(setSpotlightId);
